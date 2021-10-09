@@ -13,39 +13,41 @@
 
 <body>
     <header class="header">
-        <h1 class="header__title">
-            
-        </h1>
+        <h1 class="header__title">SPLI<span class="line-break">TTER</span></h1>
     </header>
     <main>
         <section class="splitter flex">
             <div class="splitter__info">
                 <div class="splitter__element">
                     <label for="bill">Bill</label>
-                    <input type="number" id="bill" class="splitter__bill" placeholder="0">
+                    <input type="text" id="bill" class="splitter__bill" placeholder="0">
                 </div>
-                <div class="splitter__element grid">
+                <div class="splitter__element">
                     <p>Select Tip %</p>
-                    <button type="button">5%</button>
-                    <button type="button">10%</button>
-                    <button type="button">15%</button>
-                    <button type="button">25%</button>
-                    <button type="button">50%</button>
-                    <input type="text" id="tip" placeholder="Custom">
+                    <div class="grid">
+                        <button type="button">5%</button>
+                        <button type="button">10%</button>
+                        <button type="button">15%</button>
+                        <button type="button">25%</button>
+                        <button type="button">50%</button>
+                        <input type="text" id="tip" placeholder="Custom">
+                    </div>
                 </div>
                 <div class="splitter__element">
                     <label for="people">Number of People</label>
-                    <input type="number" placeholder="0" class="splitter__people" id="people">
+                    <input type="text" placeholder="0" class="splitter__people" id="people">
                 </div>
             </div>
             <div class="splitter__results">
                 <div class="splitter__result flex">
-                    <p>Tip Amount <span>/ person</span></p>
+                    <p>Tip Amount <span class="splitter__person">/ person</span></p>
+                    <p class="splitter__number">$<span>4.27</span></p>
                 </div>
                 <div class="splitter__result flex">
-                    <p>Total <span>/ person</span></p>
+                    <p>Total <span class="splitter__person">/ person</span></p>
+                    <p class="splitter__number">$<span>32.79</span></p>
                 </div>
-                <div class="splitter__result flex">
+                <div class="splitter__result">
                     <button type="button" class="splitter__reset">Reset</button>
                 </div>
             </div>
