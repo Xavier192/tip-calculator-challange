@@ -23,11 +23,6 @@
     src:url(../fonts/Space_Mono/SpaceMono-Regular.ttf);
 }
 
-html,body{
-    width:100%;
-    height:100%;
-}
-
 body{
     font-family:'Space Mono',sans-serif;
     background-color:var(--light-grayish-cyan);
@@ -57,12 +52,18 @@ body{
     color:var(--very-dark-cyan);
 }
 
+/*Main*/
+main{
+    
+}
+
 /*Main card splitter*/
 
 .splitter{
     background-color:var(--white);
     padding:23px;
     border-radius:22px;
+    min-width:296px;
 }
 
 .splitter__info,.splitter__results{
@@ -172,7 +173,40 @@ input{
 
 
 @media screen and (min-width:782px){
-    
+    .splitter__info,.splitter__results{
+        flex-basis:auto;
+        flex:1;
+    }
+
+    .flex{
+        gap:50px;
+    }
+    .splitter__results{
+        padding:30px 45px;
+    }
+    .splitter{
+        max-width:900px;
+        margin:auto;
+    }
+    .splitter__element input{
+        padding:5px;
+    }
+    .grid{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    .splitter__element{
+        margin-bottom:40px;
+    }
+    .grid button{
+        padding:8px 15px;
+    }
+    .splitter__number{
+        font-size:44px;
+    }
+
+    .splitter__result{
+        margin-bottom:50px;
+    }
 }
 
 
