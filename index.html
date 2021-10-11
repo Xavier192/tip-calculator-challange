@@ -4,23 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="fonts/Space_Mono/SpaceMono-Regular.ttf">
+    <script src="js/script.js" defer></script>
     <title>Frontend Mentor | Tip calculator app</title>
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">SPLI<span class="line-break">TTER</span></h1>
-    </header>
     <main>
+        <h1 class="card__title">SPLI<span class="line-break">TTER</span></h1>
         <section class="splitter flex">
             <div class="splitter__info">
                 <div class="splitter__element">
                     <label for="bill">Bill</label>
-                    <input type="text" id="bill" class="splitter__bill" placeholder="0">
+                    <input type="text" id="bill" class="splitter__bill icon" placeholder="0">
                 </div>
                 <div class="splitter__element">
                     <p>Select Tip %</p>
@@ -35,17 +33,17 @@
                 </div>
                 <div class="splitter__element">
                     <label for="people">Number of People</label>
-                    <input type="text" placeholder="0" class="splitter__people" id="people">
+                    <input type="text" placeholder="0" class="splitter__people icon" id="people">
                 </div>
             </div>
             <div class="splitter__results">
                 <div class="splitter__result flex">
                     <p>Tip Amount <span class="splitter__person">/ person</span></p>
-                    <p class="splitter__number">$<span>0.00</span></p>
+                    <p class="splitter__number">$<span class="splitter__tip">0.00</span></p>
                 </div>
                 <div class="splitter__result flex">
                     <p>Total <span class="splitter__person">/ person</span></p>
-                    <p class="splitter__number">$<span>00.00</span></p>
+                    <p class="splitter__number">$<span class="splitter__total">00.00</span></p>
                 </div>
                 <div class="splitter__result">
                     <button type="button" class="splitter__reset">Reset</button>
