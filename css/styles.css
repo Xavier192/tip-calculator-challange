@@ -205,9 +205,8 @@ input:focus{
 .attribution {
     font-size: 11px;
     text-align: center;
-    position:absolute;
-    bottom:0;
     width:100%;
+    padding:50px;
 }
 
 .attribution a {
@@ -221,7 +220,7 @@ input:focus{
         top:45%;
         transform:translateY(-50%);
     }
-    
+
     .splitter__info,.splitter__results{
         flex-basis:auto;
         flex:1;
@@ -275,6 +274,7 @@ input:focus{
     }
 
     .attribution{
+        position:absolute;
         bottom:30px;
     }
 
