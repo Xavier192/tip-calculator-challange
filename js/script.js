@@ -103,9 +103,9 @@ const tipCalculator = function () {
         if (canCalculate()) {
             const tip = parseFloat((inputData[0] / 100 * inputData[1]).toFixed(2));
             const total = ((inputData[0] + tip) / inputData[2]).toFixed(2);
-
+           
             splitterTotal.innerHTML = total;
-            splitterTip.innerHTML = tip;
+            splitterTip.innerHTML = (tip/inputData[2]).toFixed(2);
 
             if (tip > 999 ||  total > 999) {
                 splitterSize.classList.add('splitter__size');

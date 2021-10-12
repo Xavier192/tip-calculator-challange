@@ -36,7 +36,7 @@ body{
     background-color:var(--light-grayish-cyan);
 }
 
-label{
+label,.splitter__element p{
     display:block;
     color:var(--dark-grayish-cyan);
     margin-bottom:8px;
@@ -47,6 +47,8 @@ label{
 input{
     text-align:right;
     font-size:24px;
+    transition:outline-color .2s;
+    outline:2px solid transparent;
 }
 
 input,button,.splitter__number,.splitter__reset{
@@ -54,8 +56,11 @@ input,button,.splitter__number,.splitter__reset{
 }
 
 input:focus{
-    outline:none;
-    outline:2px solid var(--strong-cyan);
+    outline-color:var(--strong-cyan);
+}
+
+input:hover{
+    outline-color:var(--strong-cyan);
 }
 
 .icon{
@@ -265,7 +270,7 @@ input:focus{
     }
 
     .splitter__result:last-child{
-        margin-top:110px;
+        margin-top:121px;
         margin-bottom:0;
     }
     
