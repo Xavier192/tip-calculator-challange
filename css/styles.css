@@ -18,7 +18,7 @@
     --light-grayish-cyan:hsl(185, 41%, 84%);
     --lighter-grayish-cyan:hsl(189, 41%, 97%);
     --white:hsl(0, 0%, 100%);
-    --input-font-size:24px;
+    --grayish-cyan:#f4fafa;
 }
 
 @font-face{
@@ -124,7 +124,7 @@ main{
     width:100%;
     padding:10px;
     border:none;
-    background-color: hsl(180, 12%, 97%);
+    background-color: var(--grayish-cyan);
     border-radius:5px;
     color:var(--very-dark-cyan);
 }
@@ -146,7 +146,7 @@ main{
 }
 
 #button-active{
-    background-color:var(--strong-cyan);
+    background-color:var(--strong-cyan-light);
     color:var(--very-dark-cyan);
 }
 
@@ -160,6 +160,10 @@ main{
 .splitter__result{
     margin-top:25px;
     color:var(--white);
+}
+
+.splitter__size .splitter__number{
+    font-size:30px;
 }
 
 .splitter__element p{
