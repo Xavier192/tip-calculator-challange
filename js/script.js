@@ -97,12 +97,13 @@ const tipCalculator = function () {
         }
     }
 
-    /*CHECK IF WE ARE REASY TO CALCULATE AND CALCULATES THE RESULT*/
+    /*CHECK IF WE ARE READY TO CALCULATE AND CALCULATES THE RESULT*/
 
     function calculate() {
         if (canCalculate()) {
             const tip = parseFloat((inputData[0] / 100 * inputData[1]).toFixed(2));
             const total = ((inputData[0] + tip) / inputData[2]).toFixed(2);
+
             splitterTotal.innerHTML = total;
             splitterTip.innerHTML = tip;
 
@@ -111,6 +112,7 @@ const tipCalculator = function () {
             } else {
                 splitterSize.classList.remove('splitter__size');
             }
+
         }
     }
 

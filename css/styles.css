@@ -26,6 +26,11 @@
     src:url(../fonts/Space_Mono/SpaceMono-Regular.ttf);
 }
 
+@font-face{
+    font-family:'Space Mono Bold';
+    src:url(../fonts/Space_Mono/SpaceMono-Bold.ttf);
+}
+
 body{
     font-family:'Space Mono',sans-serif;
     background-color:var(--light-grayish-cyan);
@@ -33,8 +38,10 @@ body{
 
 label{
     display:block;
-    color:var(--very-dark-cyan);
+    color:var(--dark-grayish-cyan);
     margin-bottom:8px;
+    font-weight:600;
+    font-size:14px;
 }
 
 input{
@@ -43,7 +50,7 @@ input{
 }
 
 input,button,.splitter__number,.splitter__reset{
-    font-weight:700;
+    font-family:'Space Mono Bold',sans-serif;
 }
 
 input:focus{
@@ -65,15 +72,6 @@ input:focus{
 
 .line-break{
     display:block;
-}
-
-/*MAIN*/
-
-main{
-    position:absolute;
-    width:100%;
-    top:45%;
-    transform:translateY(-50%);
 }
 
 /*HEADER H1*/
@@ -217,6 +215,13 @@ main{
 }
 
 @media screen and (min-width:782px){
+    main{
+        position:absolute;
+        width:100%;
+        top:45%;
+        transform:translateY(-50%);
+    }
+    
     .splitter__info,.splitter__results{
         flex-basis:auto;
         flex:1;
