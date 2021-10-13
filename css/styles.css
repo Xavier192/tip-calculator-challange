@@ -301,7 +301,8 @@ button{
 
     .attribution{
         position:absolute;
-        bottom:30px;
+        padding:0;
+        bottom:15px;
     }
 
 }
