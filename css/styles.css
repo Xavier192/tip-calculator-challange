@@ -16,7 +16,6 @@
     --dark-grayish-cyan:hsl(186, 14%, 43%);
     --dark-grayish-cyan-light:hsl(184, 14%, 56%);
     --light-grayish-cyan:hsl(185, 41%, 84%);
-    --lighter-grayish-cyan:hsl(189, 41%, 97%);
     --white:hsl(0, 0%, 100%);
     --grayish-cyan:#f4fafa;
 }
@@ -61,6 +60,10 @@ input:focus{
 
 input:hover{
     outline-color:var(--strong-cyan);
+}
+
+button{
+    transition:background-color .2s;
 }
 
 .icon{
@@ -121,7 +124,9 @@ input:hover{
 
 .splitter__element{
     margin-bottom:30px;
+    position:relative;
 }
+
 
 .splitter__element input{
     width:100%;
@@ -175,6 +180,22 @@ input:hover{
 
 .splitter__results .flex{
     justify-content: space-between;
+}
+
+.splitter__zero p{
+    display:none;
+}
+
+.zero p{
+    display:block;
+    color:#c06e5a;
+    position:absolute;
+    top:0;
+    right:0;   
+}
+
+.zero input{
+    outline-color:#c06e5a;
 }
 
 .splitter__reset{

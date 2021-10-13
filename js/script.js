@@ -1,4 +1,4 @@
-/*SPLITTER VALUES*/
+/*CONFIG SPLITTER VALUES*/
 
 const splitterData = function () {
     const inputData = [0, 0, 0];
@@ -17,6 +17,8 @@ const splitterData = function () {
     }
 }();
 
+/*TIP CALCULATOr MAIN SCRIPT*/
+
 const tipCalculator = function () {
     /*DOM OBJECTS*/
     const inputs = Array.from(document.getElementsByTagName('input'));
@@ -27,11 +29,11 @@ const tipCalculator = function () {
     const splitterTip = document.querySelector('.splitter__tip');
     const splitterSize = document.querySelector('.splitter__results');
     const resetButton = document.querySelector('.splitter__reset');
+    const zeroContainer = document.querySelectorAll('.splitter__element')[2];
 
     /*DATA ARRAYS*/
     const inputConstraints = splitterData.getInputConstraints();
     const inputData = splitterData.getInputData();
-
 
     /*CHECKS VALID VALUES FOR INPUTS*/
 
@@ -41,6 +43,14 @@ const tipCalculator = function () {
             eraseLetters(input);
         });
     }
+
+    inputs[2].addEventListener('keyup',function(){
+        if(inputs[2].value == '0'){
+            zeroContainer.classList.add('zero');
+        }else{
+            zeroContainer.classList.remove('zero');
+        }
+    });
 
     function clearInputs() {
         for (let input = 0; input < inputsLength; input++) {
@@ -60,7 +70,7 @@ const tipCalculator = function () {
         }
     }
 
-    /*STORE DATA FROM INPUTS  AND BUTTONS IN INPUTDATA ARRAY */
+    /*STORE DATA FROM INPUTS AND BUTTONS IN INPUT DATA ARRAY */
 
     for (let input = 0; input < inputsLength; input++) {
         inputs[input].addEventListener('keyup', function () {
